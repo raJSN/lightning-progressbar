@@ -7,8 +7,7 @@
             refresh_speed: component.get('v.refreshSpeed'),
             display_text: component.get('v.displayText'),
             use_percentage: component.get('v.usePercentage'),
-            done : function(cmp){
-                $A.getCallback(function(){
+            done :  $A.getCallback(function(){
                 	var x = component.get("v.value");
                 	var y = component.get("v.valueMax");
                 	var z = component.get("v.valueMin");
@@ -30,8 +29,7 @@
                         });
                         evt.fire();
                     }
-                });
-            }
+                })
         });
     },
     /*
